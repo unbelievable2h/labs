@@ -1,0 +1,37 @@
+{
+  "name": "observation",
+  "version": "1.0.0",
+  "description": "Camera observation",
+  "main": "app.js",
+  "engine": {
+    "npm": "8.1.2",
+    "node": "16.13.1"
+  },
+  "scripts": {
+    "start": "node app.js", 
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "client:install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client:install && npm run client:build",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "camera",
+    "observation"
+  ],
+  "author": "Andrey <zeppeli.g@yandex.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0",
+    "nodemon": "^2.0.15"
+  }
+}

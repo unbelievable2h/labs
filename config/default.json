@@ -1,0 +1,5 @@
+{
+    "jwtSecret": "andrey",
+    "mongoUri": "mongodb+srv://Danil:123@cluster0.jkkk6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "baseUrl": "http://localhost:5000"
+}
